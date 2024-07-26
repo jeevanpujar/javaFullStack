@@ -8,14 +8,19 @@ public class Login {
 		System.out.println("Enter username to login");
 		Scanner sc=new Scanner(System.in);
 		String input=sc.next();
+		boolean flag=false;
 		for (int i=0;i<userNames.length;i++) {
 			if(userNames[i].equalsIgnoreCase(input)) {
-				System.out.println("Welcome "+input+" You are logged in successfully");
+				flag=true;
 				break;
 			}else {
-				System.out.println(input+" Invalid username");
-				break;
+				flag=false;
 			}
+		}
+		if(flag) {
+			System.out.println("Welcome "+input+" You are logged in successfully");
+		}else {
+			System.out.println(input+" Invalid username");
 		}
 		sc.close();
 		

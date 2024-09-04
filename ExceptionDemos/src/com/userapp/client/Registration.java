@@ -16,10 +16,10 @@ public class Registration {
 		try {
 			System.out.println("enter the username ");
 			String username=sc.next();
-			validationService.validateUsername(username);
+			flage=validationService.validateUsername(username);
 			System.out.println("Enter pasword");
 			String password=sc.next();
-			validationService.validatePassword(password);
+			flage=validationService.validatePassword(password);
 			if(flage) {
 				System.out.println("welcome "+username);
 			}
